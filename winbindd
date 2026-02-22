@@ -1,0 +1,7 @@
+type            = process
+command         = /usr/bin/winbindd --foreground --no-process-group
+smooth-recovery = true
+logfile         = /var/log/dinit/winbindd.log
+depends-on      = samba
+depends-on      = network.target
+before          = login.target

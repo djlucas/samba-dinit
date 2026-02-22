@@ -1,0 +1,7 @@
+type            = process
+command         = /usr/bin/samba --foreground --no-process-group
+smooth-recovery = true
+logfile         = /var/log/dinit/samba.log
+depends-on      = samba-pre
+depends-on      = network.target
+before          = login.target
